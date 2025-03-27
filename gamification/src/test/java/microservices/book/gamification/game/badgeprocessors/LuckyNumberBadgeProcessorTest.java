@@ -22,7 +22,7 @@ public class LuckyNumberBadgeProcessorTest {
     @Test
     public void shouldGiveBadgeIfLuckyFactor() {
         Optional<BadgeType> badgeType = badgeProcessor
-                .processForOptionalBadge(10,
+                .processForOptionalBadge(42,
                         List.of(new ScoreCard(1L, 1L)),
                         new ChallengeSolvedDTO(1L, true, 42, 10, 1L, "John"));
         assertThat(badgeType).contains(BadgeType.LUCKY_NUMBER);
