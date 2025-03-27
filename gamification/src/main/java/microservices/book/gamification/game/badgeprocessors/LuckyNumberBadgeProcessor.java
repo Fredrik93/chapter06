@@ -10,13 +10,13 @@ import java.util.Optional;
 public class LuckyNumberBadgeProcessor implements BadgeProcessor{
     @Override
     public Optional<BadgeType> processForOptionalBadge(int currentScore, List<ScoreCard> scoreCardList, ChallengeSolvedDTO solved) {
-        return currentScore > 150 ?
-                Optional.of(BadgeType.SILVER) :
+        return currentScore == 42 ?
+                Optional.of(BadgeType.LUCKY_NUMBER) :
                 Optional.empty();
     }
 
     @Override
     public BadgeType badgeType() {
-        return BadgeType.SILVER;
+        return BadgeType.LUCKY_NUMBER;
     }
 }
